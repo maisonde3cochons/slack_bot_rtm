@@ -20,7 +20,7 @@ do
     currentTime=$(date +"%Y-%m-%d %H:%M:%S")
     echo "Memory usage is beyond 40%. Calling push notification server..."
     echo "Time : ${currentTime}"
-    python3 slackbot_server_alarm/app.py memory ${memUsage} "${currentTime}" "${hostName}" "${hostName}"
+    python3 slackbot/app.py memory ${memUsage} "${currentTime}" "${hostName}" "${hostName}"
   fi
   # Sleep for 10 second
   sleep 10

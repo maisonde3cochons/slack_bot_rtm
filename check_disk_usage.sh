@@ -9,7 +9,7 @@ do
     currentTime=$(date +"%Y-%m-%d %H:%M:%S")
     echo "Disk usage is beyond 90%. Calling push notification server..."
     echo "Time : ${currentTime}"
-    python3 slackbot_server_alarm/app.py disk "${disk_usage_info}" "${currentTime}" "${hostName}" "${hostName}"
+    python3 slackbot/app.py disk "${disk_usage_info}" "${currentTime}" "${hostName}" "${hostName}"
   fi
   sleep 10
 done
